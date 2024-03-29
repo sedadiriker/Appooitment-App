@@ -52,7 +52,7 @@ const Home = ({ data }) => {
       
       <fieldset className='border mt-5 position-relative pt-5'>
       <h3 className='ourdoctor'>Our Doctors</h3>
-      <div className="d-flex justify-content-center flex-wrap gap-5">
+      <div className="d-flex justify-content-center flex-wrap gap-5 px-5">
         {data.map((doctor) => (
           <Doctors key={doctor.id} {...doctor} onDoctorSelect={handleDoctorSelect} />
         ))}
