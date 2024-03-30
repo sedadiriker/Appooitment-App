@@ -1,0 +1,61 @@
+.appointment{
+    width: 85%;
+    margin: auto;
+    font-size: 1.5rem;
+    background: rgb(230,242,242);
+    background: linear-gradient(90deg, rgba(230,242,242,1) 37%, rgba(152,187,194,1) 100%);
+    padding: 1rem;
+    border-radius: 20px;
+    & .patient{
+        width: 45%;
+        white-space: nowrap;
+    }
+    & .date{
+        width: 45%;
+    }
+    & .btn{
+        width: 10%;
+    }
+    
+}
+.consulted {
+    background: white;
+    background-color: #556f4a; 
+    color: white;
+  }
+  .login-legend{
+    position: absolute;
+    z-index: 5;
+    top: -40px;
+    left: 0;
+    margin: 20px;
+    width: 155px;
+    color: black;
+    background-color: rgb(214, 245, 208);
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .app-main{
+    margin-top: 5rem;
+  }
+  .list-title{
+    position: absolute;
+        top: -70px;
+        left: 5rem;
+        width: 20%;
+        padding: 10px;
+        margin: 1rem auto;
+        font-size: 1.3rem;
+        background: rgb(181,163,96);
+background: linear-gradient(90deg, rgba(181,163,96,1) 4%, rgba(121,108,41,1) 69%, rgba(59,68,70,1) 100%);
+        color: white;
+        text-transform: uppercase;
+        border-radius: 20px;
+}
+
+.btn button{
+    background-color: brown;
+    border: none;
+    padding: 5px 1rem;
+}
