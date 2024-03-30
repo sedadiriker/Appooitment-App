@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Doctors from '../components/Doctors'
 import AddModal from '../components/AddModal'
 import AppointmentList from '../components/AppointmentList'
@@ -8,14 +8,20 @@ import "./Home.css"
 const Home = ({ data }) => {
   const [selectedDoctor, setSelectedDoctor] = useState(null);
   const [showModal, setShowModal] = useState(false)
-  const [appointments, setAppointments] = useState(appointmentData)
+  const [appointments, setAppointments] = useState(() => {
+    const savedAppointments = localStorage.getItem("appointments")
+    return savedAppointments ? JSON.parse(savedAppointments) : []
+  })
 
 
   const handleDoctorSelect = (doctor) => {
     setSelectedDoctor(doctor)
     setShowModal(true)
-  };
-
+  }
+  
+  useEffect(() => {
+    localStorage.setItem("appointments", JSON.stringify(appointments))
+  },[appointments])
   const handleClose = () => setShowModal(false)
   
   const removeAppointment = (index) => {
