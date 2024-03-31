@@ -8,61 +8,9 @@
     text-align: center;
   
 }
-@media screen and (max-width:1190px) {
-    .list-title, .ourdoctor{
-        font-size: 1rem !important;
-    }
-    .appointment{
-        font-size: 1.1rem;
-    }
-    .btn{
-        padding: 3px 12px !important;
-        font-size: 12px;
-    }
-    .login-legend{
-        font-size: 1.3rem;
-    }
-}
-@media screen and (max-width:980px) {
-    .list-title,.ourdoctor{
-        width: 35% !important;
-    }
-    
-}
+
 @media screen and (max-width:780px) {
-    .ourdoctor{
-        top: -35px !important;
-    }
-    .logo h1{
-        font-size: 1.5rem !important;
-    }
-    .logo img{
-        width: 70px !important;
-    }
-    .list-title,.ourdoctor{
-        font-size: 12px !important;
-    }
-    .card{
-        width: 12rem !important;
-        height: 230px;
-    }
-    .card-title{
-        font-size: 1rem !important;
-        white-space: wrap !important;
-    }
-    .appointment{
-        font-size: 14px;
-    }
-    .btn{
-        padding: 3px 12px !important;
-        font-size: 12px;
-    }
-    .login-legend{
-        font-size: 1rem;
-        top: -30px;
-    }
-}
-@media screen and (max-width:480px) {
-    .appointment{
+    .App{
+        padding: 1rem 0;
     }
 }
