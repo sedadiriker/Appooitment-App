@@ -50,7 +50,7 @@ const Home = () => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",
     }).then((res) => {
-      if (res) {
+      if (res.isConfirmed) {
         setAppointments((appointments) =>
           appointments.filter((app, i) => i !== index)
         );
