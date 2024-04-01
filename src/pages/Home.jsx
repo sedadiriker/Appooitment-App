@@ -11,7 +11,7 @@ const Home = () => {
   const [showModal, setShowModal] = useState(false);
   const [appointments, setAppointments] = useState(() => {
     const savedAppointments = localStorage.getItem("appointments"); //localstroge dan başlangıç verisi çekme..
-    return JSON.parse(savedAppointments);
+    return savedAppointments ? JSON.parse(savedAppointments) : []
   })
 
   //* LOCALSTORAGE
