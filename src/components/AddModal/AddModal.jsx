@@ -4,9 +4,17 @@ import Form from "react-bootstrap/Form";
 import { useState,useEffect } from "react";
 
 const AddModal = ({ show, handleClose, selectedDoctor,addAppointment }) => {
-//! default olarak tarih veriyorum burda. Ama ıso formatında olmalı date ın algılaması için.
-const localDate = new Date().toLocaleString();
-const ısoDate = `${localDate.slice(6, 10)}-${localDate.slice(3,5)}-${localDate.slice(0, 2)}T${localDate.slice(11)}`;
+  function getLocalDateTime() {
+    const now = new Date();
+    const timezoneOffsetInMilliseconds = now.getTimezoneOffset() * 60 * 1000;
+    // Yerel saat dilimi için ofseti çıkararak yerel zamanı elde edin
+    const localDateTime = new Date(now.getTime() - timezoneOffsetInMilliseconds);
+    // ISO string olarak dönüştürün ve sadece tarih ve saati alın (saniyeler ve milisaniyeler olmadan)
+    return localDateTime.toISOString().slice(0, 16);
+  }
+  
+  const isoDate = getLocalDateTime();
+  
 
 
 //! Modal verileri
