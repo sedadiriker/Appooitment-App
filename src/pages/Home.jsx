@@ -12,12 +12,13 @@ const Home = () => {
   const [appointments, setAppointments] = useState(() => {
     const savedAppointments = localStorage.getItem("appointments"); //localstroge dan başlangıç verisi çekme..
     return JSON.parse(savedAppointments);
-  });
+  })
 
   //* LOCALSTORAGE
   useEffect(() => {
     localStorage.setItem("appointments", JSON.stringify(appointments));
-  });
+  })
+  
   //*DOKTOR SEÇME VE MODALA GÖNDERME
   const onSelectDoctor = (name) => {
     setSelectedDoctor(name);

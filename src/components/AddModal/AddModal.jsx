@@ -1,12 +1,13 @@
 import { Modal } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 const AddModal = ({ show, handleClose, selectedDoctor,addAppointment }) => {
 //! default olarak tarih veriyorum burda. Ama ıso formatında olmalı date ın algılaması için.
 const localDate = new Date().toLocaleString();
 const ısoDate = `${localDate.slice(6, 10)}-${localDate.slice(3,5)}-${localDate.slice(0, 2)}T${localDate.slice(11)}`;
+
 
 //! Modal verileri
 //* STATE OLUŞTUR
